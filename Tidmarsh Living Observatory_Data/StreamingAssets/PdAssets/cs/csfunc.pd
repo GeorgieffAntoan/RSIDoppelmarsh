@@ -1,0 +1,17 @@
+#N canvas 1228 354 342 455 10;
+#X obj 17 18 inlet;
+#X obj 18 214 outlet;
+#X obj 18 188 route \$0;
+#X obj 17 124 s snd_csfunc;
+#X obj 18 155 r rcv_csfunc;
+#X obj 86 17 r \$1-start;
+#X obj 17 67 list prepend;
+#X obj 17 97 list prepend \$0;
+#X obj 17 42 list prepend \$2;
+#X connect 0 0 8 0;
+#X connect 2 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X connect 8 0 6 0;

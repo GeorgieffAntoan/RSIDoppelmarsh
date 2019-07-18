@@ -1,0 +1,18 @@
+#N canvas 674 128 882 462 10;
+#X obj 44 174 voiceout~ \$1;
+#X obj 106 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 46 22 voicein \$1;
+#X text 178 22 in a composition voice abstraction \, the first argument
+\$1 is the patch number for the parent voice abstraction. Pass this
+to voicein and voiceout to get the correct signaling.;
+#X text 188 195 The right inlet will receive a bang when this instance
+of the voice abstraction has been signaled to "stop." After appropriate
+response has been taken \, the right inlet of voiceout~ should be hit
+with a bang to indicate it is ready to stop.;
+#X text 187 118 The left inlet will receive a signal when this instance
+of the voice abstraction has been associated with an audio source in
+Unity and should comence producing a signal routed to the left inlet
+of voiceout~.;
+#X connect 1 0 0 1;
+#X connect 2 1 1 0;

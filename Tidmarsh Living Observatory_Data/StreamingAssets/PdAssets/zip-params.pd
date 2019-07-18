@@ -1,0 +1,97 @@
+#N canvas 0 23 919 715 10;
+#X obj 457 16 inlet;
+#X obj 329 157 expr 20*log10($f1);
+#X obj 256 206 abs;
+#X obj 256 183 - 43200;
+#X obj 256 158 % 86400;
+#X obj 347 381 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 347 348 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 347 451 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 347 413 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 528 382 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 528 349 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 528 451 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 528 416 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 396 576 outlet;
+#X obj 351 576 outlet;
+#X obj 494 576 outlet;
+#X obj 449 576 outlet;
+#X obj 604 575 outlet;
+#X obj 559 575 outlet;
+#X obj 702 575 outlet;
+#X obj 657 575 outlet;
+#X text 335 322 Frozen Cold Cool Warm Hot;
+#X text 335 365 Midnight Midday;
+#X text 339 396 Dark Shaded Cloudy Sunny;
+#X text 338 431 Arid Dry Normal Humid Wet;
+#X text 520 327 Colder Warmer;
+#X text 521 366 Drier Wetter;
+#X text 521 400 Darker Brighter;
+#X text 522 435 Still Windy;
+#X obj 84 77 cs/csstream;
+#X obj 256 123 cs/cstime;
+#X obj 328 124 cs/csstream;
+#X obj 483 122 cs/csstream;
+#X obj 698 104 cs/csstream;
+#X obj 554 203 cs/csstream;
+#X obj 397 206 cs/csstream;
+#X obj 84 112 u/zmap -10 40 0 128;
+#X obj 256 254 u/zmap 0 43200 0 128;
+#X obj 256 229 u/!- 43200;
+#X obj 397 241 u/zmap 0 100 0 128;
+#X obj 483 149 u/zmap -2 2 0 128;
+#X obj 695 148 u/zmap -2 2 0 128;
+#X obj 554 233 u/zmap -2 2 0 128;
+#X msg 84 53 device::\$1::temperature;
+#X msg 328 99 device::\$1::illuminance;
+#X msg 482 102 device::\$1::temperature::dev;
+#X msg 697 84 device::\$1::humidity::dev;
+#X msg 396 186 device::\$1::humidity;
+#X msg 553 183 device::\$1::illuminance::dev;
+#X connect 0 0 43 0;
+#X connect 0 0 44 0;
+#X connect 0 0 47 0;
+#X connect 0 0 45 0;
+#X connect 0 0 48 0;
+#X connect 0 0 46 0;
+#X connect 1 0 8 0;
+#X connect 2 0 38 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 13 0;
+#X connect 6 0 14 0;
+#X connect 7 0 15 0;
+#X connect 8 0 16 0;
+#X connect 9 0 17 0;
+#X connect 10 0 18 0;
+#X connect 11 0 19 0;
+#X connect 12 0 20 0;
+#X connect 29 0 36 0;
+#X connect 30 0 4 0;
+#X connect 31 0 1 0;
+#X connect 32 0 40 0;
+#X connect 33 0 41 0;
+#X connect 34 0 42 0;
+#X connect 35 0 39 0;
+#X connect 36 0 6 0;
+#X connect 37 0 5 0;
+#X connect 38 0 37 0;
+#X connect 39 0 7 0;
+#X connect 40 0 10 0;
+#X connect 41 0 9 0;
+#X connect 42 0 12 0;
+#X connect 43 0 29 0;
+#X connect 44 0 31 0;
+#X connect 45 0 32 0;
+#X connect 46 0 33 0;
+#X connect 47 0 35 0;
+#X connect 48 0 34 0;
+#X coords 0 -1 1 1 500 200 1 300 300;

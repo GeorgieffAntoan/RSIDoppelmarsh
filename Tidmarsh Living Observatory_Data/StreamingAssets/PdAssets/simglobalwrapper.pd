@@ -1,0 +1,9 @@
+#N canvas 508 112 313 147 10;
+#X obj 39 46 \$1;
+#X text 71 45 instantiate the actual global object;
+#X obj 37 76 catch~ global-output-l;
+#X obj 118 102 catch~ global-output-r;
+#X obj 37 124 outlet~;
+#X obj 118 124 outlet~;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;

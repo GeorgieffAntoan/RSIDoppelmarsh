@@ -1,0 +1,72 @@
+#N canvas 337 87 871 418 10;
+#X obj 140 60 inlet;
+#X obj 140 83 symbol \$1foo;
+#X obj 140 105 select foo;
+#X obj 140 178 outlet;
+#X text 13 290 usage: [argdefault \$1 f 42];
+#X text 12 312 on bang \, outputs the first argument if it's supplied
+to the parent patch \, otherwise outputs the 2nd;
+#X obj 140 148 symbol \$2;
+#X msg 140 127 bang;
+#X obj 209 147 symbol \$1;
+#X obj 209 127 bang;
+#X obj 363 129 print;
+#X obj 363 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 452 133 print;
+#X obj 452 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 365 93 symbol \$1;
+#X obj 454 96 symbol \$2;
+#X obj 539 129 print;
+#X obj 539 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 541 92 symbol \$3;
+#X obj 363 247 print;
+#X obj 363 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 452 251 print;
+#X obj 452 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 539 247 print;
+#X obj 539 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 365 211 symbol \$1x;
+#X obj 454 214 symbol \$2x;
+#X obj 541 210 symbol \$3x;
+#X obj 605 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 475 325 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 384 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 605 283 select \$3x;
+#X obj 388 289 select \$1x;
+#X obj 481 288 select \$2x;
+#X msg 696 216 \$3x;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 2 1 9 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
+#X connect 9 0 8 0;
+#X connect 11 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 10 0;
+#X connect 15 0 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 20 0 25 0;
+#X connect 22 0 26 0;
+#X connect 24 0 27 0;
+#X connect 25 0 19 0;
+#X connect 25 0 32 0;
+#X connect 26 0 21 0;
+#X connect 26 0 33 0;
+#X connect 27 0 23 0;
+#X connect 27 0 31 0;
+#X connect 31 0 28 0;
+#X connect 32 0 30 0;
+#X connect 33 0 29 0;

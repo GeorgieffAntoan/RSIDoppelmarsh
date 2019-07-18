@@ -1,0 +1,75 @@
+#N canvas 812 34 840 1014 10;
+#X obj 38 40 r \$1-datalist;
+#X obj 13 546 throw~ \$1-out;
+#X obj 49 427 *;
+#X obj 101 343 *;
+#X obj 83 369 *;
+#X obj 66 398 *;
+#X obj 38 63 unpack 0 0 0 0 0;
+#X obj 389 69 unpack f f f f f f f f f f;
+#X obj 389 17 r \$0-config;
+#X obj 412 339 list \$0;
+#X obj 412 314 loadbang;
+#X obj 389 41 route \$2;
+#X msg 411 365 \; \$1-config bog-bass_major 30 100 80 30 0 6 0 6 2
+0.5 \; \$1-config bog-bass_melody_major 30 100 80 30 2 1 0 6 0 6 \;
+\$1-config bog-bass_melody_minor 30 100 0 5 2 1 0 6 0 6 \; \$1-config
+bog-bass_minor 30 100 0 5 0 6 0 6 2 0.5 \; \$1-config bog-bass_root
+30 25 70 80 0 6 0 6 0 6 \; \$1-config bog-cello_arco_major 30 100 80
+30 0 6 3 1 0 6 \; \$1-config bog-cello_arco_minor 30 100 0 5 0 6 0
+6 2 1 \; \$1-config bog-cello_pizz_major_fast 10 10 80 30 0 6 0 6 0
+6 \; \$1-config bog-cello_pizz_major_slow 30 10 80 30 0 6 0 6 0 6 \;
+\$1-config bog-cello_pizz_minor 30 10 0 5 0 6 0 6 0 6 \; \$1-config
+bog-drums_fast1 -10 15 30 100 2 2 0 6 0 6 \; \$1-config bog-drums_fast2
+10 5 30 100 0 2 0 6 0 6 \; \$1-config bog-drums_relaxed1 20 5 30 100
+0 2 0 6 0 6 \; \$1-config bog-drums_relaxed2 40 15 30 100 2 2 0 6 0
+6 \; \$1-config bog-guitar_fast1 10 10 0 5 2 0.5 0 6 0 6 \; \$1-config
+bog-guitar_fast2 0 10 0 5 1 0.5 0 6 0 6 \; \$1-config bog-guitar_high
+30 100 0 5 3 0.5 0 6 0 6 \; \$1-config bog-guitar_slow 40 20 0 5 -2
+1 0 6 0 6 \;, f 62;
+#X obj 20 468 receive~ \$2;
+#X obj 489 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 22 510 *~ 0;
+#X obj 38 115 expr pow(2.71828 \, -pow(abs($f1-$f2) \, 2)/pow(abs($f3)
+\, 2)/2);
+#X obj 59 150 expr pow(2.71828 \, -pow(abs($f1-$f2) \, 2)/pow(abs($f3)
+\, 2)/2);
+#X obj 80 180 expr pow(2.71828 \, -pow(abs($f1-$f2) \, 2)/pow(abs($f3)
+\, 2)/2);
+#X obj 101 215 expr pow(2.71828 \, -pow(abs($f1-$f2) \, 2)/pow(abs($f3)
+\, 2)/2);
+#X obj 122 247 expr pow(2.71828 \, -pow(abs($f1-$f2) \, 2)/pow(abs($f3)
+\, 2)/2);
+#X connect 0 0 6 0;
+#X connect 2 0 15 1;
+#X connect 3 0 4 1;
+#X connect 4 0 5 1;
+#X connect 5 0 2 1;
+#X connect 6 0 16 0;
+#X connect 6 1 17 0;
+#X connect 6 2 18 0;
+#X connect 6 3 19 0;
+#X connect 6 4 20 0;
+#X connect 7 0 16 1;
+#X connect 7 1 16 2;
+#X connect 7 2 17 1;
+#X connect 7 3 17 2;
+#X connect 7 4 18 1;
+#X connect 7 5 18 2;
+#X connect 7 6 19 1;
+#X connect 7 7 19 2;
+#X connect 7 8 20 1;
+#X connect 7 9 20 2;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 7 0;
+#X connect 13 0 15 0;
+#X connect 14 0 9 0;
+#X connect 15 0 1 0;
+#X connect 16 0 2 0;
+#X connect 17 0 5 0;
+#X connect 18 0 4 0;
+#X connect 19 0 3 0;
+#X connect 20 0 3 1;

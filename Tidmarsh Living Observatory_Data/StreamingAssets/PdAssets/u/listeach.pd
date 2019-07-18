@@ -1,0 +1,28 @@
+#N canvas 40 122 548 397 10;
+#X obj 106 25 inlet;
+#X obj 64 246 outlet;
+#X text 117 245 spits out each element of the list;
+#X text 150 24 takes in a list;
+#X obj 64 174 list split 1;
+#X obj 64 91 until;
+#X obj 64 129 list append;
+#X obj 106 49 t b l;
+#X obj 225 154 bang;
+#X text 162 49 First store list \, then start the loop;
+#X text 163 86 "until" bangs its output until told to stop by a "bang"
+to its right inlet.;
+#X text 182 128 Store the remaining list.;
+#X text 270 153 third outlet of "split" tells us to stop.;
+#X text 112 205 Second outlet of "split" becomes the new list for "list
+append" above.;
+#X text 18 322 from list helpfile example 3;
+#X text 19 336 this is slow for large lists;
+#X connect 0 0 7 0;
+#X connect 4 0 1 0;
+#X connect 4 1 6 1;
+#X connect 4 2 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 1;
+#X connect 8 0 5 1;

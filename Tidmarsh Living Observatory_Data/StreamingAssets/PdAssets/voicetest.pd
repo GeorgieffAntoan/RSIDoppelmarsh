@@ -1,0 +1,17 @@
+#N canvas 129 78 524 300 10;
+#X obj 81 187 s rcv_manager;
+#X obj 279 219 r snd_manager;
+#X obj 328 41 voice~ 3;
+#X obj 399 221 r snd_csstream;
+#X obj 400 246 print csstream;
+#X obj 284 253 print manager;
+#X msg 98 57 list 0 settrack ukes;
+#X msg 75 31 list 0 settrack bog;
+#X msg 128 108 list 3 start exampledev1;
+#X msg 141 134 list 3 stop exampledev1;
+#X connect 1 0 5 0;
+#X connect 3 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;

@@ -1,0 +1,9 @@
+#N canvas 840 22 489 208 10;
+#X obj 40 161 globalout~ comp-name;
+#X text 25 33 globalout~ provides stereo out to CSharp/Unity which
+is not spatialized, f 72;
+#X text 26 64 The argument should be the name of the composition for
+which this globalout should be active.;
+#X obj 39 121 osc~ 100;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;

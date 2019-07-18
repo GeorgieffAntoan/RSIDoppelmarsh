@@ -1,0 +1,6 @@
+#N canvas 57 147 980 643 10;
+#X text 28 28 List compositions here Pass \$1 as the first argument
+to connect sends/receives to parent patch;
+#X obj 163 138 composition~ \$1 ukes-voice;
+#X obj 162 163 composition~ \$1 bog-voice;
+#X obj 162 188 composition~ \$1 zip-voice;

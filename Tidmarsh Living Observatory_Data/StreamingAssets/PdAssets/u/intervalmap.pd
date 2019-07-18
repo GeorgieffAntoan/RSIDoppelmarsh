@@ -1,0 +1,89 @@
+#N canvas 54 94 850 530 10;
+#X obj 17 79 inlet;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array \$0-steps 7 float 3 black black;
+#A 0 2 4 5 7 9 11 12;
+#X coords 0 12 7 0 200 140 1;
+#X restore 534 400 graph;
+#X obj 597 122 list length;
+#X obj 606 148 s \$0-seqlen;
+#X msg 536 171 0;
+#X obj 521 242 f;
+#X obj 557 242 + 1;
+#X obj 120 234 tabread \$0-steps;
+#X obj 446 159 listeach;
+#X obj 446 269 tabwrite \$0-steps;
+#X obj 479 241 f, f 1;
+#X obj 446 180 t f b;
+#X obj 135 156 r \$0-seqlen;
+#X obj 17 204 div;
+#X obj 120 212 mod;
+#X obj 406 302 f;
+#X obj 406 324 s \$0-octsize;
+#X text 401 341 track the total space spanned by the scale (the "octave")
+, f 20;
+#X obj 32 228 r \$0-octsize;
+#X text 145 210 calcualate a wrapped index;
+#X obj 17 252 *;
+#X obj 17 104 int;
+#X obj 17 155 t f f;
+#X obj 17 286 +;
+#X obj 17 316 outlet;
+#X obj 406 44 inlet;
+#X text 403 21 list of intervals;
+#X text 29 417 this abstraction takes a collection of intervals and
+creates a map that takes in indices into the "scale" defined by those
+intervals. For instance \, set a map for the major scale with the message
+"2 2 1 2 2 2 1" on the right inlet.;
+#X obj 446 241 +;
+#X obj 17 130 - 1;
+#X text 13 25 numbers used as indices into the interval list. note
+the tonic is actually the last element in the table \, so we start
+at -1;
+#X text 29 478 the scale wraps around and does not need to add up to
+a 12-note octave. For instance "2 2 2 2 2 2" defines a whole-tone scale
+\, but so does "2" because of the wrapping.;
+#X text 464 284 integrate the interval list and write it to the steps
+table., f 40;
+#X obj 406 77 t b a b a;
+#X obj 650 197 f \$0;
+#X obj 597 218 pack f f;
+#X msg 597 241 \; \$2-steps resize \$1;
+#X obj 597 171 t f b;
+#X connect 0 0 21 0;
+#X connect 2 0 3 0;
+#X connect 2 0 37 0;
+#X connect 4 0 5 1;
+#X connect 4 0 28 1;
+#X connect 5 0 6 0;
+#X connect 5 0 9 1;
+#X connect 6 0 5 1;
+#X connect 7 0 23 1;
+#X connect 8 0 11 0;
+#X connect 10 0 28 1;
+#X connect 11 0 28 0;
+#X connect 11 1 5 0;
+#X connect 12 0 14 1;
+#X connect 12 0 13 1;
+#X connect 13 0 20 0;
+#X connect 14 0 7 0;
+#X connect 15 0 16 0;
+#X connect 18 0 20 1;
+#X connect 20 0 23 0;
+#X connect 21 0 29 0;
+#X connect 22 0 13 0;
+#X connect 22 1 14 0;
+#X connect 23 0 24 0;
+#X connect 25 0 33 0;
+#X connect 28 0 10 0;
+#X connect 28 0 9 0;
+#X connect 28 0 15 1;
+#X connect 29 0 22 0;
+#X connect 33 0 15 0;
+#X connect 33 1 8 0;
+#X connect 33 2 4 0;
+#X connect 33 3 2 0;
+#X connect 34 0 35 1;
+#X connect 35 0 36 0;
+#X connect 37 0 35 0;
+#X connect 37 1 34 0;

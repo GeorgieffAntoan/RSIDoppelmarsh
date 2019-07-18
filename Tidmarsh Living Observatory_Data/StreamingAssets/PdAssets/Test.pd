@@ -1,0 +1,7 @@
+#N canvas 840 22 840 1001 10;
+#X obj 54 154 dac~ 1 2;
+#X obj 53 108 zip-voice \$0;
+#X obj 54 86 zip-global;
+#X obj 53 128 catch~ \$0-output;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;

@@ -1,0 +1,4 @@
+#N canvas -820 116 409 225 10;
+#X obj 21 14 ukes-global;
+#X obj 24 44 bog-global;
+#X obj 22 76 zip-global;

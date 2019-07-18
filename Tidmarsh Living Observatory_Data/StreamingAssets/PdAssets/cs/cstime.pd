@@ -1,0 +1,4 @@
+#N canvas 0 22 450 300 10;
+#X obj 80 59 r rcv_cstime;
+#X obj 80 95 outlet;
+#X connect 0 0 1 0;

@@ -1,0 +1,22 @@
+#N canvas 721 331 286 368 10;
+#X obj 35 137 list;
+#X obj 35 19 inlet;
+#X obj 35 186 outlet;
+#X obj 161 26 inlet;
+#X obj 35 45 route bang;
+#X obj 35 161 list trim;
+#X obj 74 110 r \$1-anyval;
+#X obj 161 112 s \$1-anyval;
+#X text 21 219 acts like [val] except that it can store any type of
+value. Lists will get their list selector stripped off \, though,
+f 25;
+#X obj 92 69 t b a;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 3 0 7 0;
+#X connect 4 0 0 0;
+#X connect 4 1 9 0;
+#X connect 5 0 2 0;
+#X connect 6 0 0 1;
+#X connect 9 0 0 0;
+#X connect 9 1 7 0;

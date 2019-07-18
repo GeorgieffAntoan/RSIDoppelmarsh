@@ -1,0 +1,37 @@
+#N canvas 730 61 407 486 10;
+#X obj 144 57 inlet;
+#X obj 81 346 outlet~;
+#X obj 81 266 line~;
+#X msg 183 250 set \$1;
+#X obj 81 218 pack f f;
+#X msg 81 240 0 \, \$1 \$2;
+#X obj 81 315 tabread4~;
+#X obj 144 79 makefilename \$1%d;
+#X obj 150 145 f \$2;
+#X obj 81 181 expr $f1 \; $f1/$f2*1000;
+#X text 17 437 arguments are prefix ("kick") and recorded samplerate
+;
+#X text 101 36 suffix of sample to play;
+#X obj 44 145 expr size("$s1");
+#X obj 144 100 t s b s;
+#X obj 150 341 outlet;
+#X text 17 392 plays from a bank of samples with a common prefix and
+numeric suffix \, e.g. "kick0" "kick1" "kick2" \, resampling to the
+current samplerate. Bangs the right outlet when done.;
+#X obj 150 316 delay;
+#X connect 0 0 7 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 13 0;
+#X connect 8 0 9 1;
+#X connect 9 0 4 0;
+#X connect 9 1 4 1;
+#X connect 9 1 16 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;
+#X connect 13 1 8 0;
+#X connect 13 2 3 0;
+#X connect 16 0 14 0;

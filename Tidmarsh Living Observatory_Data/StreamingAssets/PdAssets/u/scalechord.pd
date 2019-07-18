@@ -1,0 +1,36 @@
+#N canvas 510 88 467 389 10;
+#X obj 37 253 inlet;
+#X obj 37 304 outlet;
+#X obj 37 279 intervalmap;
+#X obj 100 70 inlet;
+#X obj 100 98 select 7root 7I 7II 7III;
+#X text 155 246 7root (7th chord root position);
+#X text 190 219 7I (7th chord 1st inversion);
+#X text 225 195 7I (7th chord 2nd inversion);
+#X text 260 170 7I (7th chord 3rd inversion);
+#X msg 100 247 2 2 2;
+#X msg 135 220 2 2 1;
+#X msg 170 196 2 1 2;
+#X msg 205 171 1 2 2;
+#X text 225 310 collection of different chords that map chord tones
+onto scale degrees. (assumes a western classical 8-note scale), f
+37;
+#X obj 162 65 symbol \$1;
+#X obj 162 44 loadbang;
+#X obj 241 145 print;
+#X msg 241 121 WARNING: unrecognized scalechord "\$1";
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 9 0;
+#X connect 4 1 10 0;
+#X connect 4 2 11 0;
+#X connect 4 3 12 0;
+#X connect 4 4 17 0;
+#X connect 9 0 2 1;
+#X connect 10 0 2 1;
+#X connect 11 0 2 1;
+#X connect 12 0 2 1;
+#X connect 14 0 4 0;
+#X connect 15 0 14 0;
+#X connect 17 0 16 0;

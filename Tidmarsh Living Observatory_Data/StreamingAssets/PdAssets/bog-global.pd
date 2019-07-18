@@ -1,0 +1,114 @@
+#N canvas 840 22 840 1001 10;
+#X obj 19 336 soundfiler;
+#X obj 603 102 table bog-bass_melody_minor;
+#X obj 603 126 table bog-bass_minor;
+#X obj 603 152 table bog-bass_root;
+#X obj 603 201 table bog-cello_arco_minor;
+#X obj 604 254 table bog-cello_pizz_major_fast;
+#X obj 604 278 table bog-cello_pizz_minor;
+#X obj 604 302 table bog-drums_fast1;
+#X obj 605 333 table bog-drums_fast2;
+#X obj 603 359 table bog-drums_relaxed1;
+#X obj 603 383 table bog-drums_relaxed2;
+#X obj 603 407 table bog-guitar_fast1;
+#X obj 603 431 table bog-guitar_fast2;
+#X obj 603 457 table bog-guitar_high;
+#X obj 603 481 table bog-guitar_slow;
+#X obj 603 51 table bog-bass_major;
+#X obj 19 14 loadbang;
+#X obj 20 590 tabread~ bog-bass_major;
+#X obj 20 399 *~ 705600;
+#X obj 20 366 phasor~ 0.0625;
+#X obj 20 611 send~ bog-bass_major;
+#X obj 496 586 tabread~ bog-bass_melody_minor;
+#X obj 498 615 send~ bog-bass_melody_minor;
+#X obj 689 596 tabread~ bog-bass_minor;
+#X obj 689 617 send~ bog-bass_minor;
+#X obj 892 601 tabread~ bog-bass_root;
+#X obj 892 622 send~ bog-bass_root;
+#X obj 1115 595 tabread~ bog-cello_arco_major;
+#X obj 1120 620 send~ bog-cello_arco_major;
+#X obj 1343 600 tabread~ bog-cello_arco_minor;
+#X obj 1345 620 send~ bog-cello_arco_minor;
+#X obj 19 656 tabread~ bog-cello_pizz_major_fast;
+#X obj 19 677 send~ bog-cello_pizz_major_fast;
+#X obj 274 663 tabread~ bog-cello_pizz_minor;
+#X obj 274 684 send~ bog-cello_pizz_minor;
+#X obj 499 662 tabread~ bog-drums_fast1;
+#X obj 494 690 send~ bog-drums_fast1;
+#X obj 690 664 tabread~ bog-drums_fast2;
+#X obj 690 685 send~ bog-drums_fast2;
+#X obj 893 669 tabread~ bog-drums_relaxed1;
+#X obj 893 690 send~ bog-drums_relaxed1;
+#X obj 1121 667 tabread~ bog-drums_relaxed2;
+#X obj 1121 688 send~ bog-drums_relaxed2;
+#X obj 1346 667 tabread~ bog-guitar_fast1;
+#X obj 1346 688 send~ bog-guitar_fast1;
+#X obj 1527 668 tabread~ bog-guitar_fast2;
+#X obj 1527 689 send~ bog-guitar_fast2;
+#X obj 20 716 tabread~ bog-guitar_high;
+#X obj 20 737 send~ bog-guitar_high;
+#X obj 273 721 tabread~ bog-guitar_slow;
+#X obj 273 742 send~ bog-guitar_slow;
+#X obj 603 225 table bog-cello_pizz_major_slow;
+#X obj 1526 600 tabread~ bog-cello_pizz_major_slow;
+#X obj 1526 621 send~ bog-cello_pizz_major_slow;
+#X obj 603 78 table bog-bass_melody_major;
+#X obj 273 595 tabread~ bog-bass_melody_major;
+#X obj 273 616 send~ bog-bass_melody_major;
+#X obj 603 176 table bog-cello_arco_major;
+#X msg 19 43 read -resize ./media/bog/bass_major.aif bog-bass_major
+\, read -resize ./media/bog/bass_melody_major.aif bog-bass_melody_major
+\, read -resize ./media/bog/bass_melody_minor.aif bog-bass_melody_minor
+\, read -resize ./media/bog/bass_minor.aif bog-bass_minor \, read -resize
+./media/bog/bass_root.aif bog-bass_root \, read -resize ./media/bog/cello_arco_major.aif
+bog-cello_arco_major \, read -resize ./media/bog/cello_arco_minor.aif
+bog-cello_arco_minor \, read -resize ./media/bog/cello_pizz_major_fast.aif
+bog-cello_pizz_major_fast \, read -resize ./media/bog/cello_pizz_major_slow.aif
+bog-cello_pizz_major_slow \, read -resize ./media/bog/cello_pizz_minor.aif
+bog-cello_pizz_minor \, read -resize ./media/bog/drums_fast1.aif bog-drums_fast1
+\, read -resize ./media/bog/drums_fast2.aif bog-drums_fast2 \, read
+-resize ./media/bog/drums_relaxed1.aif bog-drums_relaxed1 \, read -resize
+./media/bog/drums_relaxed2.aif bog-drums_relaxed2 \, read -resize ./media/bog/guitar_fast1.aif
+bog-guitar_fast1 \, read -resize ./media/bog/guitar_fast2.aif bog-guitar_fast2
+\, read -resize ./media/bog/guitar_high.aif bog-guitar_high \, read
+-resize ./media/bog/guitar_slow.aif bog-guitar_slow \;, f 93;
+#X connect 16 0 58 0;
+#X connect 17 0 20 0;
+#X connect 18 0 17 0;
+#X connect 18 0 21 0;
+#X connect 18 0 23 0;
+#X connect 18 0 25 0;
+#X connect 18 0 27 0;
+#X connect 18 0 29 0;
+#X connect 18 0 31 0;
+#X connect 18 0 33 0;
+#X connect 18 0 35 0;
+#X connect 18 0 37 0;
+#X connect 18 0 39 0;
+#X connect 18 0 41 0;
+#X connect 18 0 43 0;
+#X connect 18 0 45 0;
+#X connect 18 0 47 0;
+#X connect 18 0 49 0;
+#X connect 18 0 52 0;
+#X connect 18 0 55 0;
+#X connect 19 0 18 0;
+#X connect 21 0 22 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 27 0 28 0;
+#X connect 29 0 30 0;
+#X connect 31 0 32 0;
+#X connect 33 0 34 0;
+#X connect 35 0 36 0;
+#X connect 37 0 38 0;
+#X connect 39 0 40 0;
+#X connect 41 0 42 0;
+#X connect 43 0 44 0;
+#X connect 45 0 46 0;
+#X connect 47 0 48 0;
+#X connect 49 0 50 0;
+#X connect 52 0 53 0;
+#X connect 55 0 56 0;
+#X connect 58 0 0 0;

@@ -1,0 +1,9 @@
+#N canvas 719 335 450 300 10;
+#X obj 83 22 inlet;
+#X obj 89 183 print;
+#X obj 120 64 symbol \$1foo;
+#X obj 106 100 select foo;
+#X msg 81 127 default;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;

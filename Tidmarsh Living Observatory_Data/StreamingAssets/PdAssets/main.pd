@@ -1,0 +1,43 @@
+#N canvas 568 155 561 560 10;
+#X text 33 134 rcv_manager should get messages of the form: [voice
+number] [start/update/stop] [optional arguments ...] A start command
+will tell the assigned voice to begin producing a signal based on the
+optional arguments A stop command will the assigned voice to stop producing
+a signal -- when the stop has been executed a message of the form stopped
+[voice number] will be sent to snd_manager An update command will provide
+the assigned voice with update arguments If the assigned voice number
+is 0 \, all voices will be targeted for the start/update/stop command
+, f 61;
+#X obj 277 23 voice~ 5;
+#X obj 155 23 voice~ 3;
+#X obj 215 23 voice~ 4;
+#X obj 337 23 voice~ 6;
+#X obj 396 23 voice~ 7;
+#X obj 456 23 voice~ 8;
+#X obj 36 47 voice~ 9;
+#X obj 96 47 voice~ 10;
+#X obj 155 47 voice~ 11;
+#X obj 215 47 voice~ 12;
+#X obj 277 47 voice~ 13;
+#X obj 337 47 voice~ 14;
+#X obj 396 47 voice~ 15;
+#X obj 456 47 voice~ 16;
+#X obj 36 71 voice~ 17;
+#X obj 96 71 voice~ 18;
+#X obj 155 71 voice~ 19;
+#X obj 215 71 voice~ 20;
+#X obj 277 71 voice~ 21;
+#X obj 337 71 voice~ 22;
+#X obj 396 71 voice~ 23;
+#X obj 456 71 voice~ 24;
+#X obj 36 95 voice~ 25;
+#X obj 96 95 voice~ 26;
+#X obj 155 95 voice~ 27;
+#X obj 215 95 voice~ 28;
+#X obj 277 95 voice~ 29;
+#X obj 337 95 voice~ 30;
+#X obj 396 95 voice~ 31;
+#X obj 456 95 voice~ 32;
+#X obj 47 302 globallist;
+#X obj 396 117 voice~ 33;
+#X obj 456 117 voice~ 34;

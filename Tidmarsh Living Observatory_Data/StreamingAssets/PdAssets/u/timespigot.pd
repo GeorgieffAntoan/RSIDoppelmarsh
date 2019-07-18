@@ -1,0 +1,19 @@
+#N canvas 719 335 261 265 10;
+#X obj 55 34 inlet;
+#X obj 112 17 inlet;
+#X obj 55 162 outlet;
+#X text 15 201 bang the right inlet to temporarily block input \, otherwise
+pass through to the output, f 40;
+#X obj 55 137 spigot;
+#X obj 112 43 t b b;
+#X obj 149 71 f 0;
+#X obj 88 71 delay \$1;
+#X obj 88 94 f 1;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 5 1 6 0;
+#X connect 6 0 4 1;
+#X connect 7 0 8 0;
+#X connect 8 0 4 1;

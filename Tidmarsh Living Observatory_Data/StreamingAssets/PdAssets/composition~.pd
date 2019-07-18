@@ -1,0 +1,65 @@
+#N canvas 523 148 910 575 10;
+#X obj 26 149 switch~;
+#X msg 27 101 1;
+#X msg 60 101 0;
+#X obj 255 76 r \$1-start;
+#X obj 384 72 r \$1-stop;
+#X obj 361 318 r \$0-stopped;
+#X obj 359 446 s \$1-stopped;
+#X obj 257 209 s \$0-start;
+#X obj 385 203 s \$0-stop;
+#X obj 117 331 catch~ \$0-output;
+#X obj 117 368 throw~ \$1-output;
+#X obj 29 -2 r \$1-settrack;
+#X obj 486 400 s \$1-started;
+#X obj 119 67 loadbang;
+#X obj 256 150 spigot;
+#X obj 385 145 spigot;
+#X obj 418 111 r \$0-gatestate;
+#X obj 288 109 r \$0-gatestate;
+#X obj 359 411 spigot;
+#X obj 486 363 spigot;
+#X obj 518 332 r \$0-gatestate;
+#X obj 391 338 r \$0-gatestate;
+#X obj 485 310 r \$0-start;
+#X text 557 307 shorting \$0-start -- \$0-started for now;
+#X text 536 89 \$0- send/receives go to subpatch \$1- send/receives
+go to parent;
+#X obj 82 152 s \$0-gatestate;
+#X text 406 255 <-- composition subpatch (passed \$0 to connect to
+parent);
+#X obj 356 253 \$2 \$0;
+#X obj 29 40 makefilename %s-voice;
+#X obj 29 68 select \$2;
+#X obj 29 18 symbol;
+#X text 147 405 bump the stopped message to the back of the queue.
+This is necessary for the case where the nested composition patch just
+passes through \$1-stop to \$1-stopped \, which can cause the gatestate
+to flip while there are still stop messages in the queue., f 31;
+#X obj 342 377 delay 0;
+#X obj 342 348 bang;
+#X connect 1 0 25 0;
+#X connect 1 0 0 0;
+#X connect 2 0 25 0;
+#X connect 2 0 0 0;
+#X connect 3 0 14 0;
+#X connect 4 0 15 0;
+#X connect 5 0 33 0;
+#X connect 9 0 10 0;
+#X connect 11 0 30 0;
+#X connect 13 0 2 0;
+#X connect 14 0 7 0;
+#X connect 15 0 8 0;
+#X connect 16 0 15 1;
+#X connect 17 0 14 1;
+#X connect 18 0 6 0;
+#X connect 19 0 12 0;
+#X connect 20 0 19 1;
+#X connect 21 0 18 1;
+#X connect 22 0 19 0;
+#X connect 28 0 29 0;
+#X connect 29 0 1 0;
+#X connect 29 1 2 0;
+#X connect 30 0 28 0;
+#X connect 32 0 18 0;
+#X connect 33 0 32 0;

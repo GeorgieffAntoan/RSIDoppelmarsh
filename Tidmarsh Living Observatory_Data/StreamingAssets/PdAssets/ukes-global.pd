@@ -1,0 +1,187 @@
+#N canvas 888 230 1086 517 10;
+#X obj 53 12 r csloadbang;
+#X obj 104 92 loadbang;
+#X obj 53 66 cs/csstream;
+#X obj 53 166 u/onemess;
+#X obj 515 159 loadbang;
+#X obj 406 25 cs/cstime;
+#X obj 406 86 > 21600;
+#X obj 491 86 < 64800;
+#X obj 406 48 t f f;
+#X obj 406 115 &&;
+#X msg 515 186 major;
+#X obj 406 147 select 0 1;
+#X msg 464 178 major;
+#X msg 406 179 minor;
+#N canvas 242 50 906 668 tables 0;
+#X obj 95 409 soundfiler;
+#X obj 25 487 table uke1;
+#X obj 25 511 table uke2;
+#X obj 25 535 table uke3;
+#X obj 25 561 table uke4;
+#X obj 25 585 table uke5;
+#X obj 25 609 table uke6;
+#X obj 25 633 table uke7;
+#X obj 97 460 table uke8;
+#X obj 97 484 table uke9;
+#X obj 97 508 table uke10;
+#X obj 97 532 table uke11;
+#X obj 96 560 table uke12;
+#X obj 96 584 table uke13;
+#X obj 96 608 table uke14;
+#X obj 96 632 table uke15;
+#X obj 173 460 table uke16;
+#X obj 173 484 table uke17;
+#X obj 173 508 table uke18;
+#X obj 173 532 table uke19;
+#X obj 174 561 table uke20;
+#X obj 174 585 table uke21;
+#X obj 25 460 table uke0;
+#X obj 327 459 table uke-v0;
+#X obj 327 486 table uke-v1;
+#X obj 327 510 table uke-v2;
+#X obj 327 534 table uke-v3;
+#X obj 327 560 table uke-v4;
+#X obj 327 584 table uke-v5;
+#X obj 327 608 table uke-v6;
+#X obj 327 632 table uke-v7;
+#X obj 411 459 table uke-v8;
+#X obj 411 483 table uke-v9;
+#X obj 411 507 table uke-v10;
+#X obj 411 531 table uke-v11;
+#X obj 412 561 table uke-v12;
+#X obj 412 585 table uke-v13;
+#X obj 412 609 table uke-v14;
+#X obj 412 633 table uke-v15;
+#X obj 501 458 table uke-v16;
+#X obj 501 482 table uke-v17;
+#X obj 501 506 table uke-v18;
+#X obj 501 530 table uke-v19;
+#X obj 502 559 table uke-v20;
+#X obj 502 583 table uke-v21;
+#X obj 647 520 table bowl;
+#X obj 36 18 loadbang;
+#X msg 36 44 read -resize ./media/ukes/uke/000.aiff uke0 \, read -resize
+./media/ukes/uke/001.aiff uke1 \, read -resize ./media/ukes/uke/002.aiff
+uke2 \, read -resize ./media/ukes/uke/003.aiff uke3 \, read -resize
+./media/ukes/uke/004.aiff uke4 \, read -resize ./media/ukes/uke/005.aiff
+uke5 \, read -resize ./media/ukes/uke/006.aiff uke6 \, read -resize
+./media/ukes/uke/007.aiff uke7 \, read -resize ./media/ukes/uke/008.aiff
+uke8 \, read -resize ./media/ukes/uke/009.aiff uke9 \, read -resize
+./media/ukes/uke/010.aiff uke10 \, read -resize ./media/ukes/uke/011.aiff
+uke11 \, read -resize ./media/ukes/uke/012.aiff uke12 \, read -resize
+./media/ukes/uke/013.aiff uke13 \, read -resize ./media/ukes/uke/014.aiff
+uke14 \, read -resize ./media/ukes/uke/015.aiff uke15 \, read -resize
+./media/ukes/uke/016.aiff uke16 \, read -resize ./media/ukes/uke/017.aiff
+uke17 \, read -resize ./media/ukes/uke/018.aiff uke18 \, read -resize
+./media/ukes/uke/019.aiff uke19 \, read -resize ./media/ukes/uke/020.aiff
+uke20 \, read -resize ./media/ukes/uke/021.aiff uke21 \;, f 48;
+#X msg 343 45 read -resize ./media/ukes/uke_vibrato/000.aiff uke-v0
+\, read -resize ./media/ukes/uke_vibrato/001.aiff uke-v1 \, read -resize
+./media/ukes/uke_vibrato/002.aiff uke-v2 \, read -resize ./media/ukes/uke_vibrato/003.aiff
+uke-v3 \, read -resize ./media/ukes/uke_vibrato/004.aiff uke-v4 \,
+read -resize ./media/ukes/uke_vibrato/005.aiff uke-v5 \, read -resize
+./media/ukes/uke_vibrato/006.aiff uke-v6 \, read -resize ./media/ukes/uke_vibrato/007.aiff
+uke-v7 \, read -resize ./media/ukes/uke_vibrato/008.aiff uke-v8 \,
+read -resize ./media/ukes/uke_vibrato/009.aiff uke-v9 \, read -resize
+./media/ukes/uke_vibrato/010.aiff uke-v10 \, read -resize ./media/ukes/uke_vibrato/011.aiff
+uke-v11 \, read -resize ./media/ukes/uke_vibrato/012.aiff uke-v12 \,
+read -resize ./media/ukes/uke_vibrato/013.aiff uke-v13 \, read -resize
+./media/ukes/uke_vibrato/014.aiff uke-v14 \, read -resize ./media/ukes/uke_vibrato/015.aiff
+uke-v15 \, read -resize ./media/ukes/uke_vibrato/016.aiff uke-v16 \,
+read -resize ./media/ukes/uke_vibrato/017.aiff uke-v17 \, read -resize
+./media/ukes/uke_vibrato/018.aiff uke-v18 \, read -resize ./media/ukes/uke_vibrato/019.aiff
+uke-v19 \, read -resize ./media/ukes/uke_vibrato/020.aiff uke-v20 \,
+read -resize ./media/ukes/uke_vibrato/021.aiff uke-v21 \;, f 56;
+#X msg 11 365 read -resize ./media/ukes/193022__truthiswithin__tibetan-singing-bowl-struck_loop.aiff
+bowl, f 93;
+#X connect 46 0 47 0;
+#X connect 46 0 48 0;
+#X connect 46 0 49 0;
+#X connect 47 0 0 0;
+#X connect 48 0 0 0;
+#X connect 49 0 0 0;
+#X restore 43 465 pd tables;
+#X obj 406 218 s ukes-scaletype;
+#X text 405 237 minor at night;
+#X obj 53 436 s ukes-chord;
+#X text 128 420 trigger drone chord change;
+#X obj 53 253 int;
+#X obj 669 42 r csloadbang;
+#X obj 669 101 cs/csstream;
+#X msg 669 79 metric::wind_speed::mean;
+#X obj 860 103 cs/csstream;
+#X text 751 185 TODO: map wind speed;
+#X obj 53 322 +;
+#X obj 80 297 u/xrandom 5;
+#X obj 104 118 f 1;
+#X msg 860 78 metric::temperature::mean;
+#X msg 53 41 metric::temperature::mean;
+#X obj 429 430 r rcv_csstream;
+#X obj 588 429 r snd_csstream;
+#X obj 104 142 metro 4000;
+#X obj 327 172 s nighttime;
+#X obj 327 147 == 0;
+#X text 501 475 debugging output;
+#X obj 588 457 cs/csprint StreamFromPD;
+#X obj 429 457 cs/csprint StreamnToPD;
+#X obj 743 431 r rcv_manager;
+#X obj 902 430 r snd_manager;
+#X obj 743 458 cs/csprint ManagerToPD;
+#X obj 902 458 cs/csprint ManagerFromPD;
+#X obj 756 218 globalout~ ukes;
+#X obj 53 274 t f b b;
+#X obj 171 296 u/xrandom 4;
+#X msg 171 346 7I;
+#X msg 199 346 7root;
+#X msg 242 346 7II;
+#X msg 274 346 7III;
+#X obj 171 321 select 0 1 2 3;
+#X obj 53 410 pack f s;
+#X obj 171 374 symbol;
+#X text 69 208 scale (-10deg \, 40deg) to to (14 \, -14) pitch offset
+\, add 0.4999 for rounding;
+#X obj 53 190 expr (40-$f1)/50*28-14 + 0.4999;
+#X connect 0 0 29 0;
+#X connect 1 0 27 0;
+#X connect 2 0 3 0;
+#X connect 3 0 53 0;
+#X connect 4 0 10 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 1;
+#X connect 8 0 6 0;
+#X connect 8 1 7 0;
+#X connect 9 0 11 0;
+#X connect 9 0 34 0;
+#X connect 10 0 15 0;
+#X connect 11 0 13 0;
+#X connect 11 1 12 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 0;
+#X connect 19 0 43 0;
+#X connect 20 0 22 0;
+#X connect 20 0 28 0;
+#X connect 22 0 21 0;
+#X connect 25 0 50 0;
+#X connect 26 0 25 1;
+#X connect 27 0 32 0;
+#X connect 28 0 23 0;
+#X connect 29 0 2 0;
+#X connect 32 0 3 1;
+#X connect 34 0 33 0;
+#X connect 43 0 25 0;
+#X connect 43 1 26 0;
+#X connect 43 2 44 0;
+#X connect 44 0 49 0;
+#X connect 45 0 51 0;
+#X connect 46 0 51 0;
+#X connect 47 0 51 0;
+#X connect 48 0 51 0;
+#X connect 49 0 45 0;
+#X connect 49 1 46 0;
+#X connect 49 2 47 0;
+#X connect 49 3 48 0;
+#X connect 50 0 17 0;
+#X connect 51 0 50 1;
+#X connect 53 0 19 0;

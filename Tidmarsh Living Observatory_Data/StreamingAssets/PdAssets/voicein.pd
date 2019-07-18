@@ -1,0 +1,8 @@
+#N canvas 754 409 710 432 10;
+#X obj 53 90 outlet;
+#X obj 258 87 outlet;
+#X obj 53 19 r \$1-start;
+#X obj 258 21 r \$1-stop;
+#X text 65 40 receives the new device name as a symbol, f 15;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;

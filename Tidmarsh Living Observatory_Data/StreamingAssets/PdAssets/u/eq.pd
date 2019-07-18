@@ -1,0 +1,41 @@
+#N canvas 669 189 398 472 10;
+#X obj 92 18 inlet;
+#X obj 237 50 inlet;
+#X obj 204 93 select;
+#X obj 92 264 outlet;
+#X obj 144 195 spigot;
+#X obj 92 195 spigot;
+#X text 155 212 !=;
+#X text 103 211 ==;
+#X obj 144 229 f 0;
+#X obj 92 227 f 1;
+#X obj 177 173 == 0;
+#X obj 177 117 f 0;
+#X obj 204 116 f 1;
+#X text 15 304 This abstraction acts like "==" except that it works
+for symbols;
+#X obj 237 71 symbol;
+#X obj 92 40 symbol;
+#X obj 92 61 t b s b;
+#X text 15 345 it works in 3 phases: first initialize the spigots to
+the "false" position \, then if the symbols match set the spigots to
+the "true" position \, then send a bang through the open spigot to
+trigger a "1" or "0";
+#X connect 0 0 15 0;
+#X connect 1 0 14 0;
+#X connect 2 0 12 0;
+#X connect 4 0 8 0;
+#X connect 5 0 9 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 1;
+#X connect 11 0 10 0;
+#X connect 11 0 5 1;
+#X connect 12 0 10 0;
+#X connect 12 0 5 1;
+#X connect 14 0 2 1;
+#X connect 15 0 16 0;
+#X connect 16 0 5 0;
+#X connect 16 0 4 0;
+#X connect 16 1 2 0;
+#X connect 16 2 11 0;

@@ -1,0 +1,27 @@
+#N canvas 712 164 558 272 10;
+#X obj 17 8 inlet;
+#X obj 282 234 outlet;
+#X obj 282 178 route \$0;
+#X obj 17 101 list prepend \$0;
+#X obj 17 131 s snd_csstream;
+#X obj 353 37 r rcv_csstream;
+#X obj 353 234 outlet;
+#X obj 353 178 route s;
+#X obj 353 108 list trim;
+#X text 402 171 data is sent out prefixed with the stream ID when new
+data arrives, f 23;
+#X text 134 165 data is sent prefixed with the \$0 patch ID as an "ack"
+when a new stream is registered, f 25;
+#X obj 17 58 t a a;
+#X obj 17 33 symbol;
+#X connect 0 0 12 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 0;
+#X connect 5 0 8 0;
+#X connect 7 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 11 0 3 0;
+#X connect 11 1 7 1;
+#X connect 12 0 11 0;

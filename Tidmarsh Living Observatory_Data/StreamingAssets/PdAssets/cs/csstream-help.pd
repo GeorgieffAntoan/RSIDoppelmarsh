@@ -1,0 +1,10 @@
+#N canvas 497 81 450 300 10;
+#X obj 48 127 csstream;
+#X msg 51 22 device [deviceName] [metricName] [norm/std];
+#X msg 53 52 metric [metricName] [measureType];
+#X text 46 157 A message to the inlet will request a particular data
+stream from Unity which will begin outputting from the oultet. Available
+streams are currently by device or by metric. See LibPDStreamManager.cs
+for more details.;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;

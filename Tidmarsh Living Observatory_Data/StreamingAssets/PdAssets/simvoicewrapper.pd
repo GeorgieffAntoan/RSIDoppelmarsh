@@ -1,0 +1,20 @@
+#N canvas 624 307 639 356 10;
+#X obj 32 253 \$1 \$0;
+#X obj 31 285 catch~ \$0-output;
+#X obj 195 98 r \$0-stopped;
+#X obj 120 168 s \$0-start;
+#X obj 195 54 s \$0-stop;
+#X text 73 252 instantiate the voice;
+#X text 19 24 send a sensor id to start;
+#X obj 30 48 loadbang;
+#X obj 31 310 outlet~;
+#X obj 195 26 r reset-simvoice;
+#X text 257 53 signal the voice to stop;
+#X text 275 96 when the voice has stopped \, tell it to start again
+\, which should re-initialize any stream subscriptions;
+#X obj 120 144 symbol \$2;
+#X connect 1 0 8 0;
+#X connect 2 0 12 0;
+#X connect 7 0 12 0;
+#X connect 9 0 4 0;
+#X connect 12 0 3 0;

@@ -1,0 +1,6 @@
+#N canvas 0 22 450 300 10;
+#X obj 95 31 cstime;
+#X text 92 117 cstime receives the current time of day in seconds since
+midnight from Unity;
+#X floatatom 95 80 5 0 0 0 - - -, f 5;
+#X connect 0 0 2 0;

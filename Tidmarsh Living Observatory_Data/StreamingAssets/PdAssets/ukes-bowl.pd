@@ -1,0 +1,17 @@
+#N canvas 421 286 506 318 10;
+#X obj 83 243 outlet~;
+#X obj 83 36 inlet;
+#X obj 83 129 phasor~;
+#X obj 83 192 tabread4~ bowl;
+#X obj 83 171 *~ 1;
+#X text 25 15 takes in pitch offset in semitones;
+#X obj 83 79 expr pow(2 \, $f1/12)*48000/size("bowl") \; size("bowl")
+;
+#X text 328 66 calculate phasor frequency and amplitude. 48000 is the
+sample rate of the recording, f 24;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 6 0 2 0;
+#X connect 6 1 4 1;

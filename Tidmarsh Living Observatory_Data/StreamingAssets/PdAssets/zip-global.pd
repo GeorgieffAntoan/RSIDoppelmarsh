@@ -1,0 +1,26 @@
+#N canvas 575 100 1001 681 10;
+#X obj 35 30 loadbang;
+#X msg 35 59 read -resize ./media/zip/RideA1.wav zip-rideA1 \, read
+-resize ./media/zip/RideA2.wav zip-rideA2 \, read -resize ./media/zip/RideA3.wav
+zip-rideA3 \, read -resize ./media/zip/RideA4.wav zip-rideA4 \, read
+-resize ./media/zip/RideA5.wav zip-rideA5 \, read -resize ./media/zip/RideA6.wav
+zip-rideA6 \, read -resize ./media/zip/RideA7.wav zip-rideA7 \, read
+-resize ./media/zip/RideB1.wav zip-rideB1 \, read -resize ./media/zip/RideC1.wav
+zip-rideC1 \, read -resize ./media/zip/RideC2.wav zip-rideC2 \;, f
+48;
+#X obj 35 203 soundfiler;
+#X obj 372 54 table zip-rideA1;
+#X obj 372 76 table zip-rideA2;
+#X obj 372 100 table zip-rideA3;
+#X obj 372 121 table zip-rideA4;
+#X obj 373 145 table zip-rideA5;
+#X obj 373 167 table zip-rideA6;
+#X obj 373 191 table zip-rideA7;
+#X obj 483 54 table zip-rideB1;
+#X obj 598 56 table zip-rideC1;
+#X obj 600 80 table zip-rideC2;
+#X obj 41 250 phasor~ 0.125;
+#X obj 41 277 send~ zip-sync;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 13 0 14 0;
